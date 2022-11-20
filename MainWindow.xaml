@@ -1,0 +1,17 @@
+﻿<Window x:Class="BTD_Project.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BTD_Project"
+        mc:Ignorable="d"
+        Title="BTD Project: Map patcher" Height="300" Width="500" ResizeMode="NoResize">
+    <Canvas x:Name="Patcher_MainCanvas" Margin="0,0,0,-6" Background="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}">
+        <Image x:Name="image" Height="117" Canvas.Left="10" Width="156" Source="/UI/Images/BTD_icon.png" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="10"/>
+        <TextBlock x:Name="Patcher_MapNameBlock" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="132" Height="21" Width="223" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Lucida Sans Unicode" TextAlignment="Center" FontSize="16"/>
+        <Button x:Name="Patcher_MapPickButton" Content="..." Canvas.Left="400" Canvas.Top="132" HorizontalAlignment="Center" Height="21" VerticalAlignment="Top" RenderTransformOrigin="0.505,-0.172" Width="32"/>
+        <Label x:Name="Patcher_PickMapLabel" Content="Выберите карту для обработки" Canvas.Left="171" Canvas.Top="88" HorizontalContentAlignment="Center" Height="39" Width="261" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight Condensed" FontSize="24"/>
+        <Button x:Name="Patcher_StartPatchButton" Content="Начать обработку" Canvas.Left="16" Canvas.Top="168" Height="66" Width="144" FontFamily="Bahnschrift Light Condensed" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label x:Name="Patcher_PatchResultLabel" Content="" Canvas.Left="194" Canvas.Top="175" RenderTransformOrigin="0.276,-0.153" HorizontalAlignment="Center" VerticalAlignment="Top" Width="222" Height="34" FontFamily="Bahnschrift Condensed" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FF369A2E"/>
+    </Canvas>
+</Window>
