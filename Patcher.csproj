@@ -21,4 +21,9 @@
     </Resource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Source\Patcher\Patches\Examples\" />
+    <Folder Include="Source\Patcher\Generators\" />
+  </ItemGroup>
+
 </Project>

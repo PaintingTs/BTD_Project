@@ -1,3 +1,16 @@
-{
-  "BTD_StatueOfRevelation": "/MapObjects/BTD/StatueOfRevelation.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
-}
+[
+  {
+    "_type": "BTD_STATUE_OF_REVELATION",
+    "_shared": "/MapObjects/BTD/StatueOfRevelation.(AdvMapBuildingShared).xdb"
+  },
+
+  {
+    "_type": "BTD_SUN_RIDER_MONUMENT",
+    "_shared": "/MapObjects/BTD/SunRiderMonument/building.(AdvMapBuildingShared).xdb"
+  },
+
+  {
+    "_type": "BTD_WARMEN_HOUSE",
+    "_shared": "/MapObjects/BTD/WarmenHouse/building.(AdvMapBuildingShared).xdb"
+  }
+]

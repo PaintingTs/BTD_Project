@@ -8,6 +8,13 @@ namespace BTD.Patcher.MapInfo;
 
 public class Map
 {
+    private string ?_mainDirectory;
+    public string? MainDirectory
+    {
+        get { return _mainDirectory; }
+        set { _mainDirectory = value; }
+    }
+
     private string? _XdbFile { get; set; }
     public string? Xdb
     {
@@ -21,5 +28,4 @@ public class Map
         get { return _Template; }
         set { _Template = value; }
     }
-
 }

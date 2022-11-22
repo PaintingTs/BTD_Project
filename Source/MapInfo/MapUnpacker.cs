@@ -46,7 +46,6 @@ public class MapUnpacker
         Type _mapType = typeof(Map);
         foreach(string file in Directory.GetFiles(_tempDirectoryPath, "*", SearchOption.AllDirectories))
         {
-            Trace.WriteLine("Checking file " + file);
             foreach(KeyValuePair<string, IMapInfoDetector> _tempDetector in _detectorsInfo)
             {
                 if (!_alreadyDetectedFields.Contains(_tempDetector.Key) && _tempDetector.Value.CanBeDetected(file))

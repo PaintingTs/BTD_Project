@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BTD.Patcher;
 
-public static class TemplateDetector
+internal interface IMapPatchingStrategy
 {
-
+    void Patch(string text);
 }
