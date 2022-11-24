@@ -1,0 +1,78 @@
+[
+  {
+    "_type": "BANK_NAGA_TEMPLE",
+    "_shared": "/MapObjects/NEWBANK1.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_DEMOLISH",
+    "_shared": "/MapObjects/NagaTemple.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_SUNKEN_TEMPLE",
+    "_shared": "/MapObjects/DemonBank.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_UNKEMPT",
+    "_shared": "/MapObjects/HumanBank.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_CRYPT",
+    "_shared": "/MapObjects/Crypt.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_DRAGON_UTOPIA",
+    "_shared": "/MapObjects/Dragon_Utopia.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_DRAGON_UTOPIA",
+    "_shared": "/MapObjects/Dragon_Utopia_Snow.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_ELEMENTAL_STOCKPILE",
+    "_shared": "/MapObjects/Elemental_StockPile.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_ELEMENTAL_STOCKPILE",
+    "_shared": "/MapObjects/Elemental_StockPile_Snow.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_DWARVEN_TREASURE",
+    "_shared": "/MapObjects/DwarvenTreasury.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_DWARVEN_TREASURE",
+    "_shared": "/MapObjects/DwarvenTreasury_Snow.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_MAGI_VAULT",
+    "_shared": "/MapObjects/MagiVault.xdb"
+  },
+  {
+    "_type": "BANK_MAGI_VAULT",
+    "_shared": "/MapObjects/MagiVault_Snow.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_PYRAMID",
+    "_shared": "/MapObjects/Pyramid.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_TREANT_THICKET",
+    "_shared": "/MapObjects/TreantThicket.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_BLOOD_TEMPLE",
+    "_shared": "/MapObjects/WitchBank.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_BLOOD_TEMPLE",
+    "_shared": "/MapObjects/WitchBank.(AdvMapBuildingShared)(2).xdb"
+  },
+  {
+    "_type": "BANK_GARGOYLE_STONEVAULT",
+    "_shared": "/MapObjects/GargoyleStonevault.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_GARGOYLE_STONEVAULT",
+    "_shared": "/MapObjects/GargoyleStonevault_Snow.(AdvMapBuildingShared).xdb"
+  }
+]

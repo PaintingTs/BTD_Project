@@ -8,5 +8,5 @@ namespace BTD.Patcher;
 
 internal interface IMapPatchingStrategy
 {
-    void Patch(string text);
+    void Patch(ref string text);
 }

@@ -33,9 +33,11 @@ public class Patcher
         Trace.WriteLine("Running patcher ");
         Trace.WriteLine("Map xdb - " + map.Xdb + ", template is " + map.Template);
 
-        foreach(IMapPatchingStrategy patch in _patchesTypes)
+        string text = File.ReadAllText(map.Xdb!);
+        foreach (IMapPatchingStrategy patch in _patchesTypes)
         {
-            patch.Patch(File.ReadAllText(map.Xdb!));
+            patch.Patch(ref text);
         }
+        File.WriteAllText(map.Xdb!, text);
     }
 }

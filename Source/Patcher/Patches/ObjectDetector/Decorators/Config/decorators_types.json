@@ -1,0 +1,19 @@
+{
+  "BankDetector": {
+    "_type": "BTD.Patcher.BuildingDetector",
+    "_name": "AdvMapBuilding",
+    "_props": {
+      "_config": "bank_type_mapping.json",
+      "_output": "BTD_BanksInfo"
+    }
+  },
+
+  "NewBuildingsDetector": {
+    "_type": "BTD.Patcher.BuildingDetector",
+    "_name": "AdvMapBuilding",
+    "_props": {
+      "_config": "object_type_mapping.json",
+      "_output": "BTD_NewObjects"
+    }
+  }
+}
