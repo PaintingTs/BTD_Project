@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 
 using Newtonsoft.Json;
+using Patcher;
 
 namespace BTD.Patcher.MapInfo;
 
 public class TemplateDetector : IMapInfoDetector
 {
-    private string _templatesInfoPath = BTD.Path.Source + "Config\\templates.json";
     private List<string> _possibleTemplates = new List<string>();
 
     public TemplateDetector()
     {
-        _possibleTemplates = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(_templatesInfoPath))!;
+        _possibleTemplates = JsonConvert.DeserializeObject<List<string>>(Configs.templates)!;
     }
 
     public bool CanBeDetected(string path)

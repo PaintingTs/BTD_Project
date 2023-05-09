@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Patcher;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -36,7 +37,7 @@ public class BuildingDetector : IObjectRecognizingStrategy
 
     void IObjectRecognizingStrategy.Init(DetectorDecoratorProps props)
     {
-        _objectsTypes = JsonConvert.DeserializeObject<List<MapObjectDefinition>>(File.ReadAllText(BTD.Path.Source + "Patcher/Patches/ObjectDetector/Decorators/Config/" + props._config));
+        _objectsTypes = JsonConvert.DeserializeObject<List<MapObjectDefinition>>(Configs.ResourceManager.GetString(props._config));
         _outputScript = props._output + " =\n{\n";
     }
 }

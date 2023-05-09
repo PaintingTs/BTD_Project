@@ -4,12 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.IO;
+using Patcher;
 
 namespace BTD.Patcher;
 
 public class QuestGenerator : IMapPatchingStrategy
 {
-    private readonly string _questsReplace = File.ReadAllText(BTD.Path.Source + "Patcher/Patches/Examples/Quest.txt");
+    Action<string, string>? IMapPatchingStrategy._writer { get; set; }
+
+    public void LoadAdditionalPatchSettings(object? value)
+    { }
+
     public void Patch(ref string text)
     {
         Regex _secondaryRegex = new Regex("<Secondary.*?>(.*?)<\\/Secondary>", RegexOptions.Singleline);
@@ -29,11 +34,11 @@ public class QuestGenerator : IMapPatchingStrategy
                 if (_objectivesMatch.Success)
                 {
                     string _objectivesString = _objectivesMatch.Groups[1].ToString();
-                    _newCommonString = _newCommonString.Replace(_objectivesString, _objectivesString + _questsReplace);
+                    _newCommonString = _newCommonString.Replace(_objectivesString, _objectivesString + Configs.Quest);
                 }
                 else
                 {
-                    _newCommonString = _newCommonString.Replace("<Objectives/>", "<Objectives>\n" + _questsReplace + "</Objectives>");
+                    _newCommonString = _newCommonString.Replace("<Objectives/>", "<Objectives>\n" + Configs.Quest + "</Objectives>");
                 }
                 _newSecondaryString = _newSecondaryString.Replace(_commonString, _newCommonString);
             }

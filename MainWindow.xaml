@@ -5,13 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BTD_Project"
         mc:Ignorable="d"
-        Title="BTD Project: Map patcher" Height="300" Width="500" ResizeMode="NoResize">
+        Title="BTD Project: Map patcher" Height="322" Width="472" ResizeMode="NoResize">
     <Canvas x:Name="Patcher_MainCanvas" Margin="0,0,0,-6" Background="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}">
         <Image x:Name="image" Height="117" Canvas.Left="10" Width="156" Source="/UI/Images/BTD_icon.png" HorizontalAlignment="Center" VerticalAlignment="Top" Canvas.Top="10"/>
-        <TextBlock x:Name="Patcher_MapNameBlock" Canvas.Left="177" TextWrapping="Wrap" Canvas.Top="132" Height="21" Width="223" HorizontalAlignment="Left" VerticalAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" FontFamily="Lucida Sans Unicode" TextAlignment="Center" FontSize="16"/>
-        <Button x:Name="Patcher_MapPickButton" Content="..." Canvas.Left="400" Canvas.Top="132" HorizontalAlignment="Center" Height="21" VerticalAlignment="Top" RenderTransformOrigin="0.505,-0.172" Width="32"/>
-        <Label x:Name="Patcher_PickMapLabel" Content="Выберите карту для обработки" Canvas.Left="171" Canvas.Top="88" HorizontalContentAlignment="Center" Height="39" Width="261" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift SemiLight Condensed" FontSize="24"/>
         <Button x:Name="Patcher_StartPatchButton" Content="Начать обработку" Canvas.Left="16" Canvas.Top="168" Height="66" Width="144" FontFamily="Bahnschrift Light Condensed" FontSize="22" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        <Label x:Name="Patcher_PatchResultLabel" Content="" Canvas.Left="194" Canvas.Top="175" RenderTransformOrigin="0.276,-0.153" HorizontalAlignment="Center" VerticalAlignment="Top" Width="222" Height="34" FontFamily="Bahnschrift Condensed" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FF369A2E"/>
+        <Label x:Name="Patcher_PatchResultLabel" Content="" Canvas.Left="16" Canvas.Top="246" RenderTransformOrigin="0.276,-0.153" HorizontalAlignment="Left" VerticalAlignment="Top" Width="222" Height="34" FontFamily="Bahnschrift Condensed" FontSize="20" HorizontalContentAlignment="Center" Foreground="#FF369A2E"/>
+        <Button x:Name="Patcher_MapPickButton" Content="Выберите карту для обработки" Canvas.Left="190" Canvas.Top="25" Height="38" Width="242" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Bahnschrift Light Condensed" FontSize="22"/>
+        <Grid x:Name="MapInfoGrid" Height="227" Width="281" Canvas.Top="63" Canvas.Left="166" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label x:Name="MapInfo_MapLabel" Content="Карта" Width="54" FontFamily="Cambria Math" FontSize="16" Background="#00000000" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,17,0,0" VerticalContentAlignment="Center"/>
+            <Label x:Name="MapInfo_MapNameLabel" Content="" Width="215" Height="29" FontFamily="Bahnschrift SemiBold Condensed" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="54,17,0,0" VerticalContentAlignment="Stretch"/>
+            <Label x:Name="MapInfo_TemplateLabel" Content="Шаблон" Width="70" FontFamily="Cambria Math" FontSize="16" Background="#00000000" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,75,0,0"/>
+            <Label x:Name="MapInfo_TemplateNameLabel" Content="&#xA;" Width="218" Height="29" FontSize="16" FontFamily="Bahnschrift SemiBold SemiCondensed" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="70,75,0,0"/>
+            <Label x:Name="MapInfo_PlayerNumLabel" Content="Число игроков" Width="122" FontFamily="Cambria Math" FontSize="16" Background="#00000000" HorizontalContentAlignment="Center" RenderTransformOrigin="0.27,0.488" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,130,0,0"/>
+            <Label x:Name="MapInfo_PlayerCountLabel" Content="&#xA;" Width="22" HorizontalContentAlignment="Center" Height="29" FontSize="16" FontFamily="Bahnschrift SemiBold SemiCondensed" RenderTransformOrigin="0.475,-0.498" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="122,130,0,0"/>
+            <Button x:Name="TeamBuilderButton" Content="Настроить команды..." RenderTransformOrigin="-0.122,-0.143" Width="132" Height="24" IsEnabled="False" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,164,0,0"/>
+            <Button x:Name="AdditionalMapSettingsButton" Content="Дополнительные параметры карты..." RenderTransformOrigin="-0.122,-0.143" Width="217" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,46,0,0"/>
+        </Grid>
     </Canvas>
 </Window>

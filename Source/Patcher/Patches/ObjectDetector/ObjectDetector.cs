@@ -7,6 +7,7 @@ using System.Diagnostics;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
+using Patcher;
 
 namespace BTD.Patcher;
 
@@ -30,16 +31,17 @@ public class ObjectDetector : IMapPatchingStrategy
         public string _name { get; set; }
         public DetectorDecoratorProps _props { get; set; }
     }
-    private readonly string _decoratorsConfigPath = BTD.Path.Source + "Patcher/Patches/ObjectDetector/Decorators/Config/decorators_types.json";
     private readonly string _possibleObjectsNamesPath = BTD.Path.Source + "Patcher/Patches/ObjectDetector/Decorators/Config/objects_names.json";
 
     private List<string> _possibleObjectsNames = new List<string>();
     private Dictionary<IObjectRecognizingStrategy, string> _possibleDecorators = new Dictionary<IObjectRecognizingStrategy, string>();
     private Dictionary<string, int> _objectsCounts = new Dictionary<string, int>();
 
+    public Action<string, string>? _writer { get; set; }
+
     public ObjectDetector()
     {
-        JObject _decoratorsInfoObject = JObject.Parse(File.ReadAllText(_decoratorsConfigPath));
+        JObject _decoratorsInfoObject = JObject.Parse(Configs.OBJECT_DETECTOR_DECORATORS);
         foreach(JProperty _property in _decoratorsInfoObject.Properties())
         {
             DetectorDecoratorInfo _decoratorInfo = JsonConvert.DeserializeObject<DetectorDecoratorInfo>(_property.Value.ToString());
@@ -51,8 +53,11 @@ public class ObjectDetector : IMapPatchingStrategy
                 _possibleDecorators.Add(_newDetector, _decoratorInfo._name);
             }
         }
-        _possibleObjectsNames = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(_possibleObjectsNamesPath));
+        _possibleObjectsNames = JsonConvert.DeserializeObject<List<string>>(Configs.OBJECTS_NAMES);
     }
+
+    public void LoadAdditionalPatchSettings(object? value)
+    { }
 
     public void Patch(ref string text)
     {
@@ -80,13 +85,13 @@ public class ObjectDetector : IMapPatchingStrategy
                 }
             }
         }
-        text = text.Replace(_allObjects, _newObjects);
+        text = text.Replace(_allObjects, "\n" + Configs.OBJECTS_SHRINES + _newObjects);
         string _luaOutput = String.Empty;
         foreach (KeyValuePair<IObjectRecognizingStrategy, string> kvp in _possibleDecorators)
         {
             _luaOutput += kvp.Key.GetScript();
         }
-        File.WriteAllText(BTD.Path.Main + "test.lua", _luaOutput);
+        _writer!("GeneratedObjectInfo.lua", _luaOutput);
     }
 
     private string DetectName(string object_info)

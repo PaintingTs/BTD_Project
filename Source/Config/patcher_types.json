@@ -1,4 +1,32 @@
-[
-  "BTD.Patcher.ObjectDetector",
-  "BTD.Patcher.QuestGenerator"
-]
+{
+  "script": {
+    "Type": "BTD.Patcher.ScriptGenerator",
+    "File": "mainXdb",
+    "RequestedParameter": null
+  },
+  "object": {
+    "Type": "BTD.Patcher.ObjectDetector",
+    "File": "mainXdb",
+    "RequestedParameter": null
+  },
+  "quest": {
+    "Type": "BTD.Patcher.QuestGenerator",
+    "File": "mainXdb",
+    "RequestedParameter": null
+  },
+  "light": {
+    "Type": "BTD.Patcher.LightGenerator",
+    "File": "mainXdb",
+    "RequestedParameter": "useNightLight"
+  },
+  "team_generator": {
+    "Type": "BTD.Patcher.TeamGenerator",
+    "File": "mapTag",
+    "RequestedParameter": "playersTeamInfo"
+  },
+  "team_modifier": {
+    "Type": "BTD.Patcher.TeamInfoModifier",
+    "File": "mainXdb",
+    "RequestedParameter": "playersTeamInfo"
+  }
+}

@@ -5,10 +5,22 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Source\Config\map_fields_detectors.json" />
+    <None Remove="Source\Config\patcher_types.json" />
+    <None Remove="Source\Config\templates.json" />
     <None Remove="UI\Images\BTD_icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Source\Config\map_fields_detectors.json" />
+    <Resource Include="Source\Config\patcher_types.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <EmbeddedResource Include="Source\Config\templates.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +37,20 @@
     <Folder Include="Source\Patcher\Generators\" />
   </ItemGroup>
 
-  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+  <ItemGroup>
+    <Compile Update="Configs.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Configs.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Configs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Configs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 </Project>

@@ -3,7 +3,7 @@
     "_type": "BTD.Patcher.BuildingDetector",
     "_name": "AdvMapBuilding",
     "_props": {
-      "_config": "bank_type_mapping.json",
+      "_config": "BANK_TYPE_MAPPING",
       "_output": "BTD_BanksInfo"
     }
   },
@@ -12,8 +12,17 @@
     "_type": "BTD.Patcher.BuildingDetector",
     "_name": "AdvMapBuilding",
     "_props": {
-      "_config": "object_type_mapping.json",
+      "_config": "OBJECT_TYPE_MAPPING",
       "_output": "BTD_NewObjects"
+    }
+  },
+
+  "TreasuresDetector": {
+    "_type": "BTD.Patcher.TreasureDetector",
+    "_name": "AdvMapTreasure",
+    "_props": {
+      "_config": "",
+      "_output": ""
     }
   }
 }

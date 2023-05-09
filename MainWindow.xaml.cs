@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using BTD.Patcher.MapInfo;
+
 namespace BTD_Project
 {
     /// <summary>
@@ -22,11 +24,37 @@ namespace BTD_Project
     /// </summary>
     public partial class MainWindow : Window
     {
-        private PatcherFascade _patcherFascade = new PatcherFascade();
+        PatcherFascade _patcherFascade = new PatcherFascade();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            Closed += (o, e) => Application.Current.Shutdown();
+
+            MapInfoGrid.Visibility = Visibility.Hidden;
+            Patcher_StartPatchButton.IsEnabled = false;
+
             Patcher_MapPickButton.Click += _patcherFascade.MapPickButtonClicked;
+            Patcher_StartPatchButton.Click += _patcherFascade.StartPatchButtonClicked;
+            Patcher_StartPatchButton.Click += (o, e) => MessageBox.Show("Обработка успешно завершена!");
+            TeamBuilderButton.Click += _patcherFascade.TeamBuilderButtonClicked;
+            AdditionalMapSettingsButton.Click += _patcherFascade.MapSettingsButtonClicked;
+            _patcherFascade.MapAssigned += DisplayMapInfo;
+        }
+        private void DisplayMapInfo(MapBaseInfo info)
+        {
+            MapInfoGrid.Visibility = Visibility.Visible;
+            Patcher_StartPatchButton.IsEnabled = true;
+
+            MapInfo_PlayerCountLabel.Content = info.playersCount;
+            if (Convert.ToInt32(info.playersCount) > 2)
+            {
+                TeamBuilderButton.Visibility = Visibility.Visible;
+                TeamBuilderButton.IsEnabled = true;
+            }
+            MapInfo_TemplateNameLabel.Content = info.template;
+            MapInfo_MapNameLabel.Content = info.name;
         }
     }
 }

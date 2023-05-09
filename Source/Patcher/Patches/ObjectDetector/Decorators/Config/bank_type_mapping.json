@@ -29,11 +29,11 @@
   },
   {
     "_type": "BANK_ELEMENTAL_STOCKPILE",
-    "_shared": "/MapObjects/Elemental_StockPile.(AdvMapBuildingShared).xdb"
+    "_shared": "/MapObjects/Elemantal_Stockpile.(AdvMapBuildingShared).xdb"
   },
   {
     "_type": "BANK_ELEMENTAL_STOCKPILE",
-    "_shared": "/MapObjects/Elemental_StockPile_Snow.(AdvMapBuildingShared).xdb"
+    "_shared": "/MapObjects/Elemantal_Stockpile_Snow.(AdvMapBuildingShared).xdb"
   },
   {
     "_type": "BANK_DWARVEN_TREASURE",
@@ -74,5 +74,17 @@
   {
     "_type": "BANK_GARGOYLE_STONEVAULT",
     "_shared": "/MapObjects/GargoyleStonevault_Snow.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_NAMTARU_TEMPLE",
+    "_shared": "/MapObjects/BTD/NewBanks/Namtaru/Namtaru.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_SNOW_APE_CAVE",
+    "_shared": "/MapObjects/BTD/NewBanks/SnowApeCave/SnowApeCave.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BANK_BTDSUNKENTEMPLE",
+    "_shared": "/MapObjects/BTDSunkenTemple.(AdvMapBuildingShared).xdb"
   }
 ]

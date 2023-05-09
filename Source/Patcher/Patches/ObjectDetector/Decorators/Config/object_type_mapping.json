@@ -12,5 +12,9 @@
   {
     "_type": "BTD_WARMEN_HOUSE",
     "_shared": "/MapObjects/BTD/WarmenHouse/building.(AdvMapBuildingShared).xdb"
+  },
+  {
+    "_type": "BTD_KNOWLEDGE_MEGALITH",
+    "_shared": "/MapObjects/BTD/KnowledgeMegalith/KnowledgeMegalith.(AdvMapBuildingShared).xdb"
   }
 ]

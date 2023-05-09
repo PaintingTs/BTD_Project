@@ -1,0 +1,16 @@
+﻿<Window x:Class="Patcher.TeamBuilderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:TeamInfoPanel="clr-namespace:Patcher.UI.CustomControls.TeamInfoPanel"
+        mc:Ignorable="d"
+        Title="TeamBuilderWindow" Height="455" Width="338">
+    <Grid Margin="0,0,0,-6">
+        <Label x:Name="PlayerNumLabel" Content="Игроков&#xD;&#xA;" HorizontalAlignment="Center" VerticalAlignment="Top" Width="286" Height="40" HorizontalContentAlignment="Center" FontFamily="Comic Sans MS" FontSize="22"/>
+        <Label x:Name="TeamCountLabel" Content="Число команд" HorizontalAlignment="Left" Margin="27,40,0,0" VerticalAlignment="Top" Width="187" Height="37" HorizontalContentAlignment="Right" FontFamily="Comic Sans MS" FontSize="22"/>
+        <ComboBox x:Name="TeamCountComboBox" HorizontalAlignment="Left" Margin="219,51,0,0" VerticalAlignment="Top" Width="59" Height="26"/>
+        <Grid x:Name="TeamsInfoGrid" Margin="0,88,0,59"/>
+        <Button x:Name="BuildTeamsButton" Content="Применить" HorizontalAlignment="Center" Margin="0,371,0,0" VerticalAlignment="Top" Height="37" Width="102"/>
+    </Grid>
+</Window>

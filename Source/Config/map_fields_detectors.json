@@ -1,0 +1,10 @@
+{
+  "BaseDetectors": {
+    "template": "BTD.Patcher.MapInfo.TemplateDetector",
+    "playersCount": "BTD.Patcher.MapInfo.PlayersCountDetector"
+  },
+  "FileDetectors": {
+    "mainXdb": "BTD.Patcher.MapInfo.MainXdbDetector",
+    "mapTag": "BTD.Patcher.MapInfo.MapTagDetector"
+  }
+}
